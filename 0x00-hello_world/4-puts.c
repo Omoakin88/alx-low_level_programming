@@ -1,13 +1,13 @@
 #include<stdio.h>
 
 /**
- * main - first case of c
+ * main - first case project
  *
- * RETURN: always end
+ * RETURN: always 0
  */
 
 int main (void)
 {
-     puts("\"Programming is like building a multilingual puzzle);
-     return (o);
+     puts("\"Programming is like building a multilingual puzzle");
+     return (0);
 }
