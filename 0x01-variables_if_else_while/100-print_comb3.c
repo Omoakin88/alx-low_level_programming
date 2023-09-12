@@ -1,16 +1,14 @@
 #include <stdio.h>
-
 /**
- * main - print possible combination
+ * main - print all possible different combinations of two digits
  *
- * Return: always 0 (success)
+ * Return: always 0 (successs)
  */
 int main(void)
-
 {
 	int n, m;
 
-	for (n = 49; n <= 56; n++)
+	for (n = 48; n <= 56; n++)
 	{
 		for (m = 49; m <= 57; m++)
 		{
@@ -23,12 +21,12 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 				}
+
 			}
 
 		}
+
 	}
 	putchar('\n');
 	return (0);
-
 }
-
