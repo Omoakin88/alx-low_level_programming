@@ -1,26 +1,30 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_array - print `n` elements of an array of integers
- * @a: int type array pointer
- * @n: int type integer
- * Description: Numbers must be separated by comma and space.
- * You can only use _putchar to print.
+ * rot13 - encodes a string using rot13
+ * @s: input
+ * Return: the pointer
  */
 
-void print_array(int *a, int n)
+char *rot13(char *s)
+{
+	int count = 0, i;
+	char alphabet[53] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char rot13[53] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-{
-int i;
-i = 0;
-for (n--; n >= 0; n--, i++)
-{
-printf("%d", a[i]);
-if (n > 0)
-{
-printf(", ");
+	while (*(s + count) != '\0')
+	{
+		for (i = 0; i < 52; i++)
+		{
+			if (*(s + count) == alphabet[i])
+			{
+				*(s + count) = rot13[i];
+				break;
+			}
+		}
+		count++;
+	}
+
+	return (s);
 }
-}
-printf("\n");
-}
+
